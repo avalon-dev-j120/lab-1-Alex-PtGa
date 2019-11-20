@@ -3,6 +3,7 @@ package ru.avalon.java.j20.labs.tasks;
 import ru.avalon.java.j20.labs.Task;
 
 import java.util.Iterator;
+import ru.avalon.java.j20.labs.models.Fibonacci;
 
 /**
  * Задание №3
@@ -13,6 +14,20 @@ public class Task3 implements Task {
 
     @Override
     public void run() {
+         System.out.println("Выполняется Task3");
+        
+        Fibonacci f20 = new Fibonacci(20);
+        
+        Iterator<Integer> it = f20.iterator();
+        
+        while(it.hasNext()) {
+            Integer e = it.next();
+            System.out.println(" " + e);
+        }
+        int sum = 0;
+        for(Integer x:f20) {
+            sum +=x;
+        }
         /*
          * TODO(Студент): Выполнить задание №3
          *
